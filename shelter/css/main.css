@@ -1,15 +1,16 @@
 @font-face {
     font-family: 'Arial';
-    src: url('assets/fonts/arial/arial-regular.ttf') format('truetype');
+    src: url('../assets/fonts/arial/arial-regular.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Georgia';
-    src: url('assets/fonts/georgia/georgia-regular.ttf') format('truetype');
+    src: url('../assets/fonts/georgia/georgia-regular.ttf') format('truetype');
 }
 
 html {
-    cursor: url('assets/img/icon-normal.png'), auto;
+    cursor: url('../assets/img/icon-normal.png'), auto;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -29,7 +30,7 @@ div.header-main {
 }
 
 footer {
-    background-image: url('assets/img/footer-gradient-background.png');
+    background-image: url('../assets/img/footer-gradient-background.png');
     background-size: cover;
     background-position: center;
     height: 350px;
@@ -37,8 +38,8 @@ footer {
 
 .footer {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: space-between;
+    align-items: stretch;
     max-width: 1280px;
     margin: 0 auto;
     width: 1200px;
@@ -67,7 +68,7 @@ footer {
 
 header {
     height: 908px;
-    background-image: url('assets/img/start-screen-gradient-background.jpg');
+    background-image: url('../assets/img/start-screen-gradient-background.jpg');
     background-size: cover;
     background-position: center;
 
@@ -166,7 +167,7 @@ div.not-only {
     text-align: left;
 }
 
-div.logo {
+.logo {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -198,7 +199,7 @@ ul.nav-list {
 .nav-link:hover {
     text-decoration: underline;
     text-decoration-thickness: 3px;
-    cursor: url('assets/img/icon-hover.png'), auto;
+    cursor: url('../assets/img/icon-hover.png'), auto;
     text-decoration-color: rgb(241, 205, 179);
     text-underline-offset: 5px;
 }
@@ -375,8 +376,10 @@ div.text-donat {
     height: 23px;
     font-weight: 400;
     line-height: 115%;
-    letter-spacing: 6%;
+    letter-spacing: 0.06em;
     text-align: left;
+    white-space: nowrap;
+
 }
 
 .bank {
@@ -446,11 +449,21 @@ div.text-donat {
 }
 
 .make-a-friend {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 207px;
     height: 52px;
-    padding: 15px 45px 15px 45px;
     border-radius: 100px;
     background: rgb(241, 205, 179);
+    color: rgb(41, 41, 41);
+    font-family: Georgia, serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 130%;
+    letter-spacing: 6%;
+    text-align: left;
+    text-decoration: none;
 }
 
 .Main {
@@ -495,7 +508,7 @@ div.text-donat {
 .our-title {
     /* h3 */
     color: rgb(84, 84, 84);
-    font-family: Georgia;
+    font-family: Georgia, serif;
     font-size: 35px;
     font-weight: 400;
     line-height: 130%;
@@ -515,6 +528,8 @@ div.text-donat {
     letter-spacing: 6%;
     text-align: left;
     border: none;
+    text-decoration: none;
+
 }
 
 .arrow-left {
@@ -594,7 +609,7 @@ div.text-donat {
     text-align: center;
 }
 
-.title-footer {
+.footer-title {
     color: rgb(255, 255, 255);
     font-family: Georgia, serif;
     font-size: 35px;
@@ -606,9 +621,8 @@ div.text-donat {
 
 .icon-info {
     width: 40px;
-    height: 26px;
-    color: rgb(241, 205, 179);
-}
+    height: 32px;
+    background: rgb(241, 205, 179);}
 
 .info-item {
     color: rgb(241, 205, 179);
@@ -616,6 +630,35 @@ div.text-donat {
     font-size: 20px;
     font-weight: 400;
     line-height: 115%;
-    letter-spacing: 6%;
+    letter-spacing: 0.06em;
     text-align: left;
 }
+
+a {
+    text-decoration: none;
+}
+
+.nav-link-main {
+    color: rgb(250, 250, 250);
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    cursor: url('../assets/img/icon-hover.png'), auto;
+    text-decoration-color: rgb(241, 205, 179);
+    text-underline-offset: 5px;
+}
+
+.info-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    width: 300px;
+    height: 234px;
+    margin-top: 56px;
+    margin-bottom: 60px;
+
+}
+/*.info-box > h2 {*/
+/*    margin: 0 0 10px 0;*/
+
+/*}*/
