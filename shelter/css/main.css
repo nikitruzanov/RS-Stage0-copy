@@ -209,6 +209,10 @@ nav {
     background-color: #F6F6F6;
     background-size: cover;
     background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .help {
@@ -217,7 +221,7 @@ nav {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 80px 40px 100px 40px;
+    margin: 80px 40px 100px 40px;
     gap: 60px;
 }
 
@@ -253,6 +257,7 @@ nav {
     flex-wrap: wrap;
     justify-content: center;
     gap: 120px;
+    max-width: 1100px;
 }
 
 .help-item {
