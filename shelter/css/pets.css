@@ -9,12 +9,16 @@
 }
 
 html {
-    cursor: url('../assets/img/icon-normal.png'), auto;
     scroll-behavior: smooth;
+    cursor: url('../assets/icon/icon-normal.png'), auto;
 }
 
 .logo-link {
     text-decoration: none;
+}
+
+button.disables {
+    cursor: url('../assets/icon/icon-disable.png'), auto;
 }
 
 .logo {
@@ -25,6 +29,13 @@ html {
     text-align: center;
     width: 184px;
     height: 60px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
 }
 
 .pets-item:hover .learn-more {
@@ -160,24 +171,24 @@ footer {
 }
 
 .pet-card {
+    width: 1200px;
+    height: 930px;
     display: flex;
     flex-flow: row wrap;
     gap: 40px;
-    row-gap: 30px;
-    margin-top: -64px;
+    row-gap: 20px;
+    margin-top: -50px;
 }
 
 .pets-item {
     width: 270px;
     height: 435px;
-    flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     text-align: center;
     background: rgb(250, 250, 250);
-    transition: background-color 2.0s ease, transform 2.0s ease;
     gap: 30px;
 }
 
@@ -198,13 +209,15 @@ footer {
     line-height: 23px;
     letter-spacing: 0.06em;
     text-align: center;
-    margin-top: -23px;
+    margin: 0;
+}
+
+button.on {
+    background: rgb(241, 205, 179);
 }
 
 .learn-more {
-    margin-top: -23px;
     box-sizing: border-box;
-    /* color-primary */
     border: 2px solid rgb(241, 205, 179);
     border-radius: 100px;
     display: flex;
@@ -223,20 +236,17 @@ footer {
     text-align: left;
     white-space: nowrap;
     background: none;
-    transition: background-color 2.0s ease, transform 2.0s ease;
-
 }
 
-.learn-more:hover {
-    cursor: url('../assets/img/icon-hover.png'), auto;
-    background: rgb(253, 220, 196);
+main {
+    height: 1342px;
 }
 
 .friends-main {
+    padding: 80px 40px 100px;
     background-color: rgb(246, 246, 246);
     background-size: cover;
     background-position: center;
-    height: 1342px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -250,8 +260,8 @@ footer {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 80px 40px 100px 40px;
-    gap: 45px;
+    height: 1162px;
+    gap: 70px;
 }
 
 .friend-nav {
@@ -282,26 +292,31 @@ footer {
     line-height: 115%;
     letter-spacing: 0.06em;
     text-align: center;
-    transition: background-color 2.0s ease, transform 2.0s ease;
 }
 
 .nav-item:hover {
-    cursor: url('../assets/img/icon-hover.png'), auto;
     background: rgb(253, 220, 196);
+}
+
+.logo:hover {
+    box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
+}
+
+.info-item:hover {
+    color: rgb(253, 220, 196);
 }
 
 .nav-item:active {
     background: rgb(241, 205, 179);
 }
 
-.disables {
+.off {
     border: 2px solid rgb(205, 205, 205);
     color: rgb(205, 205, 205);
     background: none;
-    cursor: url('../assets/img/icon-disable.png'), auto;
 }
 
-.disables:hover {
+.off:hover {
     background: none;
 }
 
@@ -320,22 +335,18 @@ footer {
 }
 
 .nav-link {
-    cursor: url('../assets/img/icon-normal.png'), auto;
     text-decoration: none;
-    color: rgb(205, 205, 205);
+    color: rgb(84, 84, 84);
     font-family: Arial, serif;
     font-size: 15px;
     font-weight: 400;
     line-height: 160%;
     letter-spacing: 0;
     text-align: left;
-    transition: background-color 2.0s ease, transform 2.0s ease;
-
 }
 
 .nav-link:hover {
-    cursor: url('../assets/img/icon-hover.png'), auto;
-    color: rgb(250, 250, 250);
+    color: rgb(41, 41, 41);
     font-family: Arial, serif;
     font-size: 15px;
     font-weight: 400;
@@ -345,7 +356,7 @@ footer {
 }
 
 .nav-link:active {
-    color: rgb(250, 250, 250);
+    color: rgb(84, 84, 84);
     font-family: Arial, serif;
     font-size: 15px;
     font-weight: 400;
@@ -371,5 +382,10 @@ footer {
 }
 
 .friends-title {
-    margin-top: -25px;
+    margin-top: -35px;
+}
+
+.cursor {
+    cursor: url('../assets/icon/icon-hover.png'), auto;
+    transition: background 1s ease;
 }
