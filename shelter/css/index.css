@@ -39,7 +39,7 @@ header {
     display: flex;
     flex-direction: column;
     height: 460px;
-    width: 322px;
+    max-width: 322px;
     gap: 21px;
     margin-bottom: 18px;
 }
@@ -63,7 +63,7 @@ div.not-only {
 
 .about-s {
     display: flex;
-    width: 1200px;
+    max-width: 1280px;
     height: 408px;;
     gap: 120px;
     margin: 0 auto;
@@ -78,7 +78,6 @@ div.not-only {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 
 .About-text > h3 {
@@ -197,6 +196,7 @@ nav {
     flex-direction: column;
     align-items: center;
     gap: 60px;
+    margin: 0 auto;
 }
 
 .main-our-friends {
@@ -244,6 +244,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 1200px;
 }
 
 .help-list {
@@ -743,4 +744,127 @@ footer {
 .cursor {
     cursor: url('../assets/icon/icon-hover.png'), auto;
     transition: background 1s ease;
+}
+
+@media (max-width: 768px) {
+    .header-main {
+        width: 768px;
+        flex-direction: row;
+        margin: 30px 30px 0 30px;
+    }
+
+    div.not-only {
+        margin: 0;
+        gap: 0;
+    }
+
+    .Not-only {
+        gap: 0;
+        margin-bottom: 0;
+    }
+
+    .Main {
+        display: flex;
+        align-items: center;
+    }
+
+    .start-puppy {
+        width: 569px;
+        height: 593px;
+    }
+
+    .not-only {
+        flex-direction: column;
+        gap: 100px;
+        width: 569px;
+        height: 1015px;
+    }
+
+    header {
+        height: 1165px;
+    }
+
+
+    .logo {
+        margin-right: 50px;
+    }
+
+    .about-s {
+        width: 768px;
+        height: 1048px;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        margin: 0;
+    }
+
+    .box-our-friends {
+
+    }
+
+    nav {
+        margin-left: 0;
+    }
+
+    .about-d {
+        height: 1048px;
+    }
+
+    .about-pets {
+        width: 300px;
+        height: 408px;
+        margin: 0;
+    }
+
+    .about-text {
+        width: 430px;
+        height: 380px;
+        margin: 0;
+        gap: 0;
+    }
+
+    .none {
+        display: none;
+    }
+
+    .main-our-friends {
+        width: 768px;
+        height: 877px;
+    }
+
+    .box-our-friends {
+        max-width: 708px;
+        height: 697px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 60px;
+    }
+
+    .our-title {
+        margin-top: 0;
+        text-align: center;
+    }
+
+    .friends {
+        margin-top: 0;
+    }
+
+    .pet-card {
+        gap: 20px;
+    }
+
+    .arrow-left {
+        margin-top: 0;
+        margin-right: 0;
+    }
+
+    .arrow-right {
+        margin-top: 0;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 320px) {
+
 }
