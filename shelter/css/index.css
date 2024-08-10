@@ -8,9 +8,12 @@
     src: url('../assets/fonts/georgia/georgia-regular.ttf') format('truetype');
 }
 
-.header-div {
+header {
+    background-image: url('../assets/img/start-screen-gradient-background.jpg');
+    background-size: cover;
+    background-position: center;
     margin: 0 auto;
-    padding: 3%;
+    padding: 30px 40px 0 40px;
 }
 
 .header-main {
@@ -75,14 +78,6 @@ body {
     padding: 0;
     box-sizing: border-box;
     width: 100%;
-}
-
-header {
-    background-image: url('../assets/img/start-screen-gradient-background.jpg');
-    background-size: cover;
-    background-position: center;
-    margin: 0 auto;
-    padding: 3%;
 }
 
 .Not-only {
@@ -408,9 +403,7 @@ div.text-donat {
 }
 
 .start-puppy {
-    width: 100%;
-    max-width: clamp(260px, 569px, 698px);
-    overflow: hidden;
+    width: clamp(569px, 25vw, 698px);
 }
 
 .not-only-h1 {
