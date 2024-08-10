@@ -10,6 +10,7 @@
 
 html, body {
     height: 100%;
+    margin: 0;
 }
 
 html {
@@ -28,11 +29,11 @@ button.disables {
 .pet-card {
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     text-align: center;
-    gap: 2vw;
-    row-gap: 1vw;
+    gap: 40px;
+    row-gap: 30px;
 }
 
 .pets-item {
@@ -94,7 +95,7 @@ button.on {
 }
 
 .friends-main {
-    padding: 6vw 3vw 8vw 3vw;
+    padding: 80px 40px 100px 40px;
     background-color: rgb(246, 246, 246);
     background-size: cover;
     background-position: center;
@@ -107,13 +108,15 @@ button.on {
     align-items: center;
     text-align: center;
     max-width: 1200px;
-    gap: 70px;
+    row-gap: 55px;
+    margin: 0 auto;
 }
 
 .friend-nav {
     display: flex;
+    align-items: flex-end;
     gap: 20px;
-    margin-top: -10px;
+    margin-top: 10px;
 }
 
 .nav-item {
@@ -121,16 +124,11 @@ button.on {
     justify-content: center;
     align-items: center;
     padding: 23px 19px 23px 19px;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-    margin: 0;
     width: 52px;
     height: 52px;
     border-radius: 100px;
     border: 2px solid rgb(241, 205, 179);
     background: none;
-    /* h4 */
     color: rgb(41, 41, 41);
     font-family: Georgia, serif;
     font-size: 20px;
@@ -159,6 +157,7 @@ button.on {
 }
 
 .title-h3 {
+    margin: 0;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -172,7 +171,7 @@ button.on {
 }
 
 .friends-title {
-    margin-top: -35px;
+    white-space: nowrap;
 }
 
 .cursor {
@@ -180,14 +179,56 @@ button.on {
     transition: background 1s ease;
 }
 
+
 @media (max-width: 768px) {
     .friend-box {
-        max-width: 700px;
+        max-width: 708px;
+        margin: 20px 64px 0 64px;
+        gap: 25px;
     }
+
+    .friend-nav {
+        margin-top: 20px;
+        gap: clamp(10px, 2.23vw, 20px);
+    }
+
+    .pet-card .pets-item:nth-last-child(-n+2) {
+        display: none;
+    }
+
+    .friends-main {
+        padding: 60px 30px 70px 30px;
+    }
+
 }
 
 @media (max-width: 320px) {
     .friend-box {
         max-width: 300px;
+        gap: 42px;
+        margin: 0;
     }
+
+    .friends-main {
+        padding: 42px 10px 42px 10px;
+    }
+
+    .title-h3 {
+        font-size: 25px;
+    }
+
+    .pet-card .pets-item:nth-last-child(-n+5) {
+        display: none;
+    }
+
+    .friend-nav {
+        gap: 10px;
+        margin-top: 0;
+    }
+
+    .pet-card {
+        gap: 30px;
+        justify-content: center;
+    }
+
 }
