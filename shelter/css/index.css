@@ -8,9 +8,73 @@
     src: url('../assets/fonts/georgia/georgia-regular.ttf') format('truetype');
 }
 
+header {
+    background-image: url('../assets/img/start-screen-gradient-background.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 90px;
+    margin: 0 auto;
+    padding: 30px 40px 0 40px;
+}
+
+.header-main {
+    display: flex;
+    max-width: 1200px;
+    white-space: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+nav {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    list-style-type: none;
+}
+
+.hamburger-menu {
+    display: none;
+}
+
+
+.hamburger {
+    background: none;
+    border: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.hamburger span {
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: rgb(241, 205, 179);
+}
+
 html {
-    cursor: url('../assets/img/icon-normal.png'), auto;
     scroll-behavior: smooth;
+    cursor: url('../assets/icon/icon-normal.png'), auto;
 }
 
 body {
@@ -20,40 +84,18 @@ body {
     width: 100%;
 }
 
-div.header-main {
-    max-width: 1280px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header {
-    height: 908px;
-    background-image: url('../assets/img/start-screen-gradient-background.jpg');
-    background-size: cover;
-    background-position: center;
-}
-
 .Not-only {
     display: flex;
     flex-direction: column;
-    height: 460px;
-    width: 322px;
-    gap: 21px;
-    margin-bottom: 18px;
+    justify-content: center;
+    gap: 42px;
+    margin-bottom: 75px;
 }
 
 div.not-only {
-    max-width: 1280px;
     display: flex;
-    margin: 90px 40px 0 40px;
-    align-items: center;
-    justify-content: space-between;
-
     gap: 42px;
-    width: 1200px;
-    height: 728px;
+    max-width: 1200px;
 }
 
 .about > img {
@@ -63,14 +105,12 @@ div.not-only {
 
 .about-s {
     display: flex;
-    width: 1200px;
-    height: 408px;;
+    max-width: 1200px;
     gap: 120px;
     margin: 0 auto;
 }
 
 .about-d {
-    height: 588px;
     background-color: #FFFFFF;
     background-size: cover;
     background-position: center;
@@ -78,7 +118,7 @@ div.not-only {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    padding: 80px 40px 100px 40px;
 }
 
 .About-text > h3 {
@@ -92,14 +132,12 @@ div.not-only {
 }
 
 .about-text {
-    width: 430px;
-    height: 380px;
-    margin-right: 175px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    justify-content: center;
     gap: 25px;
-    margin-top: 3px;
+    max-width: 430px;
 }
 
 .title {
@@ -125,37 +163,7 @@ div.not-only {
     margin-top: 10px;
 }
 
-.logo {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 184px;
-    height: 60px;
-    margin-top: 30px;
-    margin-left: 40px;
-    margin-right: 546px;
-}
-
-nav {
-    margin-left: -10px;
-}
-
-.nav-list {
-    display: flex;
-    list-style-type: none;
-    align-items: center;
-    white-space: nowrap;
-    margin-top: 42px;
-    margin-right: 100px;
-}
-
 .nav-link {
-    margin-right: 35px;
-    /* paragraph-l */
-    cursor: url('../assets/img/icon-normal.png'), auto;
-    /* paragraph-l */
     color: rgb(205, 205, 205);
     font-family: Arial, serif;
     font-size: 15px;
@@ -167,8 +175,6 @@ nav {
 }
 
 .nav-link:hover {
-    cursor: url('../assets/img/icon-hover.png'), auto;
-    /* paragraph-l */
     color: rgb(250, 250, 250);
     font-family: Arial, serif;
     font-size: 15px;
@@ -184,7 +190,6 @@ nav {
     text-underline-offset: 5px;
     text-decoration: underline;
     text-decoration-thickness: 3px;
-    /* paragraph-l */
     color: rgb(250, 250, 250);
     font-family: Arial, serif;
     font-size: 15px;
@@ -196,8 +201,7 @@ nav {
 
 
 .box-our-friends {
-    max-width: 1280px;
-    height: 877px;
+    max-width: 1200px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -205,59 +209,50 @@ nav {
 }
 
 .main-our-friends {
-    height: 877px;
     background-color: #F6F6F6;
     background-size: cover;
     background-position: center;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    padding: 80px 40px 100px 40px;
 }
 
 .help {
+    max-width: 1200px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    text-align: center;
-    margin: 80px 40px 100px 40px;
-    gap: 60px;
+    gap: 55px;
 }
 
 .help-main {
     background-color: #FFFFFF;
     background-size: cover;
     background-position: center;
-    height: 611px;
+    padding: 80px 40px 100px 40px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    text-align: center;
 }
 
 .Introduction {
-    height: 462px;
     background-color: #F6F6F6;
     background-size: cover;
     background-position: center;
 }
 
 .friends {
-    margin-top: -45px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    gap: clamp(1px, 4.7vw, 53px);
 }
 
 .help-list {
-    margin-top: 56px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 120px;
-    max-width: 1100px;
+    row-gap: 55px;
 }
 
 .help-item {
@@ -267,7 +262,7 @@ nav {
     align-items: center;
     text-align: center;
     white-space: nowrap;
-    margin-top: -90px;
+    gap: 30px;
 }
 
 .help-item > h4 {
@@ -278,26 +273,23 @@ nav {
     line-height: 115%;
     letter-spacing: 0.06em;
     text-align: center;
+    margin: 0;
 }
 
 .help-item > img {
     width: 60px;
     height: 60px;
-    margin-top: 4px;
 }
 
 .help-title {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
     text-align: center;
-    margin-top: 25px;
     color: rgb(84, 84, 84);
     font-family: Georgia, serif;
     font-size: 35px;
     font-weight: 400;
     line-height: 130%;
     letter-spacing: 0.06em;
+    margin: 0;
 }
 
 .About-text > p {
@@ -310,37 +302,32 @@ nav {
     background-color: #F6F6F6;
     background-size: cover;
     background-position: center;
-    display: flex;
-    align-items: center;
-    height: 462px;
-
+    padding: 80px 182px 100px 183px;
 }
 
 .in-addition-d {
+    max-width: 1200px;
     display: flex;
-    width: 915px;
-    height: 282px;
-    left: 183px;
-    top: 80px;
-    margin: 0 auto;
-    gap: 30px;
     justify-content: center;
     align-items: center;
+    margin: 0 auto;
+    gap: 30px;
+
 }
 
-.in-addition-d > img {
-    width: 505px;
-    height: 261px;
+
+.donation-dog {
+    width: clamp(300px, 40vw, 505px);
 }
+
 
 div.text-donat {
-    margin-top: -15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    width: 380px;
-    height: 282px;
+    max-width: 430px;
+    gap: 20px;
 }
 
 .dark-m {
@@ -351,7 +338,8 @@ div.text-donat {
     font-weight: 400;
     line-height: 18px;
     letter-spacing: 0;
-    margin-top: 30px;
+    margin: 0;
+    white-space: wrap;
 }
 
 .debt {
@@ -360,13 +348,13 @@ div.text-donat {
     align-items: center;
     gap: 15px;
     padding: 10px 15px 10px 15px;
-    width: 319px;
-    height: 23px;
+}
+
+.background-debt:hover {
+    background: rgb(253, 220, 196);
 }
 
 .background-debt {
-    width: 349px;
-    height: 43px;
     background: rgb(241, 205, 179);
     border-radius: 9px;
 }
@@ -375,8 +363,6 @@ div.text-donat {
     color: rgb(84, 84, 84);
     font-family: Georgia, serif;
     font-size: 20px;
-    width: 274px;
-    height: 23px;
     font-weight: 400;
     line-height: 115%;
     letter-spacing: 0.06em;
@@ -385,8 +371,6 @@ div.text-donat {
 }
 
 .bank {
-    margin-top: -15px;
-    /* h5 */
     color: rgb(84, 84, 84);
     font-family: Georgia, serif;
     font-size: 15px;
@@ -394,10 +378,10 @@ div.text-donat {
     line-height: 110%;
     letter-spacing: 0.06em;
     text-align: left;
+    margin: 0;
 }
 
 .you-can {
-    /* h3 */
     color: rgb(84, 84, 84);
     font-family: Georgia, serif;
     font-size: 35px;
@@ -405,30 +389,26 @@ div.text-donat {
     line-height: 130%;
     letter-spacing: 0.06em;
     text-align: left;
-    margin-top: 3px;
+    margin: 0;
 }
 
 .about-cozy {
     padding: 0;
     margin: 0;
-    /* h3 */
     color: rgb(84, 84, 84);
     font-family: Georgia, serif;
     font-size: 35px;
     font-weight: 400;
     line-height: 130%;
     letter-spacing: 0.06em;
-    width: 370px;
-    height: 90px;
 }
 
 .start-puppy {
-    width: 698px;
-    height: 728px;
+    align-self: flex-end;
+    width: clamp(450px, 55vw, 698px);
 }
 
 .not-only-h1 {
-    /* h2 */
     color: rgb(255, 255, 255);
     font-family: Georgia, serif;
     font-size: 44px;
@@ -436,11 +416,10 @@ div.text-donat {
     line-height: 130%;
     letter-spacing: 0;
     text-align: left;
-    margin-bottom: 0;
+    margin: 0;
 }
 
 .not-only-p {
-    /* paragraph-l */
     color: rgb(205, 205, 205);
     font-family: Arial, serif;
     font-size: 15px;
@@ -448,9 +427,7 @@ div.text-donat {
     line-height: 160%;
     letter-spacing: 0;
     text-align: left;
-    width: 460px;
-    height: 72px;
-    margin-top: 21px;
+    margin: 0;
 }
 
 .make-a-friend.button {
@@ -458,13 +435,6 @@ div.text-donat {
 }
 
 .make-a-friend {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 207px;
-    height: 52px;
-    border-radius: 100px;
-    background: rgb(241, 205, 179);
     color: rgb(41, 41, 41);
     font-family: Georgia, serif;
     font-size: 17px;
@@ -472,28 +442,18 @@ div.text-donat {
     line-height: 130%;
     letter-spacing: 0.06em;
     text-align: left;
-    text-decoration: none;
-    margin-top: 6px;
-    margin-left: 0;
-}
-
-.Main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    border-radius: 100px;
+    padding: 15px 45px 15px 45px;
+    max-width: 117px;
+    white-space: nowrap;
 }
 
 .about-pets {
-    width: 300px;
-    height: 408px;
-    margin-left: 175px;
-    margin-top: -8px;
+    max-width: 300px;
 }
 
 .first-p {
     margin: 0;
-    /* paragraph-l */
     color: rgb(76, 76, 76);
     font-family: Arial, serif;
     font-size: 15px;
@@ -501,13 +461,10 @@ div.text-donat {
     line-height: 160%;
     letter-spacing: 0;
     text-align: left;
-    width: 430px;
-    height: 96px;
 }
 
 .second-p {
     margin: 0;
-    /* paragraph-l */
     color: rgb(76, 76, 76);
     font-family: Arial, serif;
     font-size: 15px;
@@ -515,13 +472,9 @@ div.text-donat {
     line-height: 160%;
     letter-spacing: 0;
     text-align: left;
-    width: 430px;
-    height: 144px;
 }
 
 .our-title {
-    margin-top: 80px;
-    /* h3 */
     color: rgb(84, 84, 84);
     font-family: Georgia, serif;
     font-size: 35px;
@@ -529,11 +482,11 @@ div.text-donat {
     line-height: 130%;
     letter-spacing: 0.06em;
     text-align: center;
+    margin: 0;
 }
 
 .our-button {
-    margin-top: 13px;
-    padding: 15px 45px 15px 45px;
+    padding: 15px 45px;
     border-radius: 100px;
     background: rgb(241, 205, 179);
     color: rgb(41, 41, 41);
@@ -545,11 +498,13 @@ div.text-donat {
     text-align: left;
     border: none;
     text-decoration: none;
+}
 
+.our-button.button {
+    background: rgb(241, 205, 179);
 }
 
 .arrow-left {
-    margin-top: 32px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -559,11 +514,9 @@ div.text-donat {
     width: 52px;
     height: 52px;
     padding: 23px 19px 23px 19px;
-    margin-right: 53px;
 }
 
 .arrow-right {
-    margin-top: 32px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -576,19 +529,15 @@ div.text-donat {
     height: 52px;
     padding: 23px 19px 23px 19px;
     transform: rotate(180.00deg);
-    margin-left: 53px;
 
 }
 
 .learn-more {
-    margin: 0;
+    margin: 0 41.5px 30px 42px;
     box-sizing: border-box;
-    /* color-primary */
     border: 2px solid rgb(241, 205, 179);
     border-radius: 100px;
     padding: 15px 45px;
-    width: 187px;
-    height: 52px;
     color: rgb(41, 41, 41);
     font-family: Georgia, serif;
     font-size: 17px;
@@ -598,30 +547,19 @@ div.text-donat {
     text-align: left;
     background: none;
     white-space: nowrap;
-    transition: background-color 2.0s ease, transform 2.0s ease;
-
 }
 
 .button {
     background: none;
     border: 2px solid rgb(241, 205, 179);
-    cursor: url('../assets/img/icon-normal.png'), auto;
 }
 
 .button:hover {
-    cursor: url('../assets/img/icon-hover.png'), auto;
     background: rgb(253, 220, 196);
-    transition: background-color 2.0s ease, transform 2.0s ease;
 }
 
-.learn-more:hover {
-    cursor: url('../assets/img/icon-hover.png'), auto;
-    background: rgb(253, 220, 196);
-}
 
 .pets-item {
-    width: 270px;
-    height: 435px;
     border-radius: 9px;
     display: flex;
     gap: 30px;
@@ -629,10 +567,16 @@ div.text-donat {
     justify-content: center;
     align-items: center;
     background: rgb(250, 250, 250);
+    max-width: 270px;
+    max-height: 435px;
 }
 
 .icon-item-pets {
     margin: 0
+}
+
+.logo:hover {
+    box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
 }
 
 .pets-item:hover {
@@ -645,7 +589,8 @@ div.text-donat {
 
 .pet-card {
     display: flex;
-    gap: 90px;
+    flex-wrap: wrap;
+    gap: clamp(10px, 8vw, 90px);
 }
 
 .name-pet {
@@ -663,80 +608,391 @@ a {
     text-decoration: none;
 }
 
-.nav-link-main {
+.nav-link-off {
     color: rgb(250, 250, 250);
+    font-family: Arial, serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 160%;
+    letter-spacing: 0;
+    text-align: left;
     text-decoration: underline;
     text-decoration-thickness: 3px;
-    cursor: url('../assets/img/icon-hover.png'), auto;
     text-decoration-color: rgb(241, 205, 179);
     text-underline-offset: 5px;
-    margin-right: 37px;
-    letter-spacing: 0;
-
-}
-
-footer {
-    background-image: url('../assets/img/footer-gradient-background.png');
-    background-size: cover;
-    background-position: center;
-    height: 350px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.footer-box {
-    width: 1280px;
-    display: flex;
-    gap: 160px;
-    margin: 40px 40px 0 40px;
-}
-
-.info {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-}
-
-.info-item {
-    color: rgb(241, 205, 179);
-    font-family: Georgia, serif;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 115%;
-    letter-spacing: 0.06em;
-    text-align: left;
-    text-decoration: none;
-}
-
-.info-box {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 10px;
-    margin-bottom: 60px;
-}
-
-.footer-title {
-    color: rgb(255, 255, 255);
-    font-family: Georgia, serif;
-    font-size: 35px;
-    font-weight: 400;
-    line-height: 130%;
-    letter-spacing: 0.06em;
-    text-align: left;
-    margin: 16px 0 0 0;
 }
 
 .logo-link {
     text-decoration: none;
 }
 
-.puppy-footer {
-    margin: 0;
+.cursor {
+    cursor: url('../assets/icon/icon-hover.png'), auto;
+    transition: background 1s ease;
 }
 
-.donation-dog {
-    margin-top: -15px;
+.xz {
+    gap: 90px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    flex-direction: column;
 }
+
+@media (max-width: 768px) {
+
+    .main-our-friends {
+        padding: 80px 30px 100px 30px;
+    }
+
+    .xz {
+        gap: 60px;
+    }
+
+    .friends {
+        gap: 12px;
+    }
+
+    header {
+        padding: 30px 30px 0 30px;
+        gap: 60px;
+    }
+
+    .about-s {
+        max-width: 437px;
+        flex-direction: column;
+        align-items: center;
+        gap: 80px;
+    }
+
+    .pet-card .pets-item:nth-child(3) {
+        display: none;
+    }
+
+    .about-pets {
+        order: 1;
+        width: clamp(200px, 50vw, 300px);
+    }
+
+    div.not-only {
+        max-width: 569px;
+        flex-direction: column;
+        gap: 100px;
+        margin: 0 clamp(10px, 10vw, 70px);
+    }
+
+    .Not-only {
+        margin-bottom: 0;
+        padding: 0 54px;
+    }
+
+    .make-a-friend {
+        align-self: center;
+    }
+
+    .start-puppy {
+        width: clamp(200px, 75vw, 569px);
+        align-self: normal;
+        margin: 0 0 0 clamp(10px, 10vw, 70px);
+    }
+
+    .box-our-friends {
+        max-width: 708px;
+    }
+
+    .header-main {
+        max-width: 708px;
+    }
+
+    .help-main {
+        padding: 80px 69px 100px 69px;
+    }
+
+    .help {
+        max-width: 630px;
+    }
+
+    .in-addition-d {
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    .in-addition-s {
+        padding: 0;
+    }
+
+    .donation-dog {
+        order: 1;
+        margin: 0 132px 100px 131px;
+        width: clamp(300px, 66vw, 505px);
+    }
+
+    .help-list {
+        gap: 60px;
+        row-gap: 55px;
+    }
+
+    .help-item {
+        width: 170px;
+        height: 113px;
+    }
+
+    .about-d {
+        padding: 74px clamp(35px, 10vw, 166px) 100px clamp(35px, 10vw, 166px);
+    }
+
+    .pet-card {
+        gap: 40px;
+        justify-content: center;
+    }
+
+    div.text-donat {
+        margin: 80px 194px 0 194px;
+    }
+
+    .you-can {
+        font-size: clamp(25px, 5vw, 35px);
+    }
+
+    .card {
+        font-size:clamp(15px, 3vw, 20px);
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .nav-list {
+        display: none;
+    }
+
+    header {
+        padding: 30px 20px;
+    }
+
+    .not-only-h1 {
+        font-size: clamp(25px, 4vw, 44px);
+    }
+
+    .xz {
+        margin: 0;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+
+    .pet-card {
+        order: 1;
+    }
+
+    .arrow-left {
+        order: 0;
+    }
+    .arrow-right {
+        order: 0;
+    }
+
+    .friends {
+        flex-direction: column-reverse;
+    }
+
+    .help-list {
+        justify-content: center;
+    }
+
+}
+
+@media (max-width: 320px) {
+
+    div.not-only {
+        margin: 0 10px;
+        gap: 105px;
+    }
+
+    .xz {
+        gap: 75px;
+    }
+
+    .Not-only {
+        padding: 0;
+        max-width: 300px;
+    }
+
+    .start-puppy {
+        margin: 0 0 0 50px;
+        width: 260px;
+    }
+
+    .about-d {
+        padding: 42px 10px;
+    }
+
+    .about-s {
+        max-width: 300px;
+        gap: 42px;
+    }
+
+    .pet-card {
+        order: -1;
+    }
+
+    .arrow-left {
+        order: 0;
+    }
+
+    .friends {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 80px;
+        row-gap: 20px;
+    }
+
+    .about-pets {
+        margin: 0 20px;
+        width: clamp(260px, 8.9vw, 300px);
+    }
+
+    .in-addition-d {
+        max-width: 300px;
+        margin: 0;
+        gap: 42px;
+    }
+
+    div.text-donat {
+        margin: 0;
+        max-width: 300px;
+        align-items: center;
+    }
+
+    .card {
+        font-size: 15px;
+    }
+
+    .pet-card .pets-item:nth-child(2) {
+        display: none;
+    }
+
+    .box-our-friends {
+        max-width: 300px;
+        gap: 42px;
+    }
+
+    .help {
+        max-width: 290px;
+        gap: 42px;
+    }
+
+    .help-item {
+        height: 87px;
+        width: 130px;
+        gap: 20px;
+    }
+
+    .help-main {
+        padding: 40px 15px;
+    }
+
+    .help-list {
+        gap: 30px;
+        row-gap: 30px;
+        max-width: 290px;
+        justify-content: start;
+    }
+
+    .help-item > img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .help-item > h4 {
+        font-size: 15px;
+    }
+
+    .donation-dog {
+        width: 260px;
+        margin: 0;
+    }
+
+    .in-addition-s {
+        padding: 42px 10px;
+    }
+
+    .not-only-h1 {
+        font-size: 25px;
+        letter-spacing: 0.06em;
+        text-align: center;
+    }
+
+    header {
+        padding: 0;
+    }
+
+    .header-main {
+        padding: 30px 20px 0 20px;
+        max-width: 300px;
+    }
+
+    .not-only-p {
+        text-align: center;
+    }
+
+    .about-text {
+        text-align: center;
+        align-items: center;
+        gap: 22px;
+    }
+
+    .about-cozy {
+        font-size: 25px;
+    }
+
+    .first-p {
+        margin: 0 15px;
+        text-align: justify;
+    }
+
+    .second-p {
+        margin: 0 15px;
+        text-align: justify;
+
+    }
+
+    .our-title {
+        font-size: 25px;
+    }
+
+    .main-our-friends {
+        padding: 42px 10px;
+    }
+
+    .help-title {
+        font-size: 25px;
+    }
+
+    .you-can {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .bank {
+        letter-spacing: 0;
+    }
+
+    .dark-m {
+        text-align: justify;
+        padding: 0 10px;
+    }
+
+}
+
+
+
+
+

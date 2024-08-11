@@ -1,0 +1,157 @@
+footer {
+    background-image: url('../assets/img/footer-gradient-background.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    padding: 40px 40px 0 40px;
+
+}
+
+.footer-box {
+    width: 100%;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    gap: 160px;
+    row-gap: 0;
+    margin: 0 auto;
+}
+
+.info {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-item {
+    color: rgb(241, 205, 179);
+    font-family: Georgia, serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    text-align: left;
+    text-decoration: none;
+    white-space: nowrap;
+
+}
+
+.footer-title {
+    color: rgb(255, 255, 255);
+    font-family: Georgia, serif;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    text-align: left;
+    margin: 0;
+}
+
+
+.info-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 16px 0 60px 0;
+    gap: 20px;
+}
+
+.info-item:hover {
+    color: rgb(253, 220, 196);
+}
+
+.puppy-footer {
+    width: 300px;
+}
+
+.activ {
+    display: none;
+}
+
+
+@media (max-width: 768px) {
+
+    footer {
+        padding: 3.91vw 3.91vw 0 3.91vw;
+    }
+
+    .footer-box {
+        max-width: 708px;
+        flex-wrap: wrap;
+        gap: 60px;
+        row-gap: 65px;
+        margin: 0 4.43vw 0 4.43vw;
+    }
+
+    .info-box {
+        gap: 35px;
+        padding: 0;
+    }
+
+    .title-h3 {
+        font-size: clamp(25px, 5vw, 35px);
+    }
+
+    .puppy-footer {
+        width: 300px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .puppy-footer {
+        width: clamp(260px, 8.93vw, 300px);
+    }
+}
+
+@media (max-width: 320px) {
+    .footer-box {
+        max-width: 300px;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .info-box {
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        max-width: 300px;
+    }
+
+    .footer-title {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .puppy-footer {
+        width: 260px;
+        margin: 0 30px 0 30px;
+    }
+
+    .none {
+        display: none;
+    }
+
+    .activ {
+        display: block;
+    }
+
+    .adress {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 40px;
+    }
+
+    footer {
+        padding: 30px 10px 0 10px;
+    }
+
+    .footer-box {
+        margin: 0 auto;
+    }
+
+}
