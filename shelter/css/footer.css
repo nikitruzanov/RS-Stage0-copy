@@ -2,20 +2,17 @@ footer {
     background-image: url('../assets/img/footer-gradient-background.png');
     background-size: cover;
     background-position: center;
-    display: flex;
     padding: 40px 40px 0 40px;
-
+    display: flex;
+    justify-content: center;
 }
 
 .footer-box {
-    width: 100%;
     max-width: 1200px;
-    flex-wrap: wrap;
     display: flex;
-    justify-content: center;
-    gap: 160px;
-    row-gap: 0;
-    margin: 0 auto;
+    flex-flow: row wrap;
+    justify-content: start;
+    gap: 150px;
 }
 
 .info {
@@ -35,7 +32,6 @@ footer {
     text-align: left;
     text-decoration: none;
     white-space: nowrap;
-
 }
 
 .footer-title {
@@ -57,6 +53,7 @@ footer {
     align-items: flex-start;
     padding: 16px 0 60px 0;
     gap: 20px;
+    max-width: 300px;
 }
 
 .info-item:hover {
@@ -75,15 +72,16 @@ footer {
 @media (max-width: 768px) {
 
     footer {
-        padding: 3.91vw 3.91vw 0 3.91vw;
+        padding: 30px 30px 0 30px;
     }
 
     .footer-box {
         max-width: 708px;
         flex-wrap: wrap;
-        gap: 60px;
+        gap: 40px;
         row-gap: 65px;
-        margin: 0 4.43vw 0 4.43vw;
+        margin: 0 34px 0 34px;
+        justify-content: center;
     }
 
     .info-box {
