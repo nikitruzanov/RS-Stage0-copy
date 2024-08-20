@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'Arial';
-    src: url('../assets/fonts/arial/arial-regular.ttf') format('truetype');
+    src: url('../fonts/arial/arial-regular.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Georgia';
-    src: url('../assets/fonts/georgia/georgia-regular.ttf') format('truetype');
+    src: url('../fonts/georgia/georgia-regular.ttf') format('truetype');
 }
 
 html, body {
@@ -15,11 +15,11 @@ html, body {
 
 html {
     scroll-behavior: smooth;
-    cursor: url('../assets/icon/icon-normal.png'), auto;
+    cursor: url('../icon/icon-normal.png'), auto;
 }
 
 button.disables {
-    cursor: url('../assets/icon/icon-disable.png'), auto;
+    cursor: url('../icon/icon-disable.png'), auto;
 }
 
 .pets-item:hover .learn-more {
@@ -175,7 +175,7 @@ button.on {
 }
 
 .cursor {
-    cursor: url('../assets/icon/icon-hover.png'), auto;
+    cursor: url('../icon/icon-hover.png'), auto;
     transition: background 1s ease;
 }
 
