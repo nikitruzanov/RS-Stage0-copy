@@ -71,17 +71,17 @@
                     <button class="arrow-left button cursor">&larr;</button>
                 </div>
                 <div class="pet-card">
-                    <div class="pets-item cursor">
+                    <div class="pets-item cursor" data-index="4">
                         <img src="assets/img/pets-katrine.png" alt="Katrine" class="icon-item-pets">
                         <h2 class="name-pet">Katrine</h2>
                         <button class="learn-more button cursor">Learn more</button>
                     </div>
-                    <div class="pets-item cursor">
+                    <div class="pets-item cursor" data-index="0">
                         <img src="assets/img/pets-jennifer.png" alt="Jennifer" class="icon-item-pets">
                         <h2 class="name-pet">Jennifer</h2>
                         <button class="learn-more button cursor">Learn more</button>
                     </div>
-                    <div class="pets-item cursor none">
+                    <div class="pets-item cursor none" data-index="2">
                         <img src="assets/img/pets-woody.png" alt="Woody" class="icon-item-pets">
                         <h2 class="name-pet">Woody</h2>
                         <button class="learn-more button cursor">Learn more</button>
@@ -92,6 +92,25 @@
                 </div>
             </div>
             <a href="pets.html" class="our-button button cursor">Get to know the rest</a>
+            <div id="popup-overlay" class="hidden">
+                <div class="popup-content" id="popup-content">
+                    <button class="close-btn button cursor"><img src="assets/icon/close-btn.svg" alt="close-btn"></button>
+                    <div class="popup-body">
+                        <img class="popup-img" src="" alt="Pet Image" id="popup-img">
+                        <div class="popup-info">
+                            <h2 id="popup-name"></h2>
+                            <p id="popup-breed"></p>
+                            <p id="popup-description"></p>
+                            <ul>
+                                <li><strong>Age:</strong> <span id="popup-age"></span></li>
+                                <li><strong>Inoculations:</strong> <span id="popup-inoculations"></span></li>
+                                <li><strong>Diseases:</strong> <span id="popup-diseases"></span></li>
+                                <li><strong>Parasites:</strong> <span id="popup-parasites"></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </div>
     <div class="help-main">
