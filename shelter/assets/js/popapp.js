@@ -12,9 +12,8 @@ fetch('data/pets.json')
 document.querySelectorAll('.pets-item').forEach(item => {
 item.addEventListener('click', function () {
 
-    const index = this.getAttribute('data-index'); // Получаем индекс из атрибута data-index
+    const index = this.getAttribute('data-index');
 
-    // Заполняем попап данными из JSON
     const pet = petsData[index];
     document.querySelector('#popup-img').src = pet.img;
     document.querySelector('#popup-name').textContent = pet.name;
