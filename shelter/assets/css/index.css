@@ -25,9 +25,8 @@
 
 .header-main {
     display: flex;
-    max-width: 1200px;
-    white-space: nowrap;
     justify-content: space-between;
+    white-space: nowrap;
 }
 
 .logo {
@@ -918,6 +917,7 @@ a {
         height: 100%;
         background: rgba(0, 0, 0, 0.5);
         z-index: 5;
+        pointer-events: none;
     }
 
     .overlay.active {
