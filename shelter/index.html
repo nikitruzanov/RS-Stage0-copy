@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>main</title>
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
     <link rel="icon" href="assets/icon/icon-favicon.ico">
 </head>
 <body>
-<header>
-        <div class="header-main">
+<div class="background-header">
+    <div class="header-box">
+        <header class="header-main">
             <a href="" class="logo-link cursor">
                 <section class="logo">
                     <h2 class="title">Cozy House</h2>
@@ -32,10 +33,10 @@
                     <li><a href="#Contacts" class="nav-link cursor">Contacts</a></li>
                 </ul>
             </nav>
-        </div>
+        </header>
         <div class="not-only">
             <section class="Not-only">
-                <h1 class="not-only-h1">Not only people<br>need a house</h1>
+                <h1 class="not-only-h1">Not only people need a house</h1>
                 <p class="not-only-p">We offer to give a chance to a little and nice puppy with an extremely wide and
                     open
                     heart. He or she will love you more than anybody else in the world, you will see!</p>
@@ -43,13 +44,14 @@
             </section>
             <img src="assets/img/start-screen-puppy.png" alt="start puppy" class="start-puppy">
         </div>
-</header>
+    </div>
+</div>
 <main>
     <div class="about-d">
         <section class="about-s" id="About">
             <img src="assets/img/about-pets.png" alt="about-pets" class="about-pets">
             <div class="about-text">
-                <h3 class="about-cozy">About the shelter<br>“Cozy House”</h3>
+                <h3 class="about-cozy">About the shelter “Cozy House”</h3>
                 <p class="first-p">Currently we have 121 dogs and 342 cats on our hands and statistics show that only
                     20% of them will find a family. The others will continue to live with us and will be waiting for a
                     lucky chance to become dearly loved.</p>
@@ -62,40 +64,59 @@
     </div>
     <div class="main-our-friends">
         <section class="box-our-friends" id="our-friends">
-            <h2 class="our-title">Our friends who<br>
-                are looking for a house</h2>
+            <h2 class="our-title">Our friends who<br>are looking for a house</h2>
             <div class="friends">
                 <div>
                     <button class="arrow-left button cursor">&larr;</button>
                 </div>
-                <div class="pet-card">
-                    <div class="pets-item cursor">
-                        <img src="assets/img/pets-katrine.png" alt="Katrine" class="icon-item-pets">
-                        <h2 class="name-pet">Katrine</h2>
-                        <button class="learn-more button cursor">Learn more</button>
-                    </div>
-                    <div class="pets-item cursor">
-                        <img src="assets/img/pets-jennifer.png" alt="Jennifer" class="icon-item-pets">
-                        <h2 class="name-pet">Jennifer</h2>
-                        <button class="learn-more button cursor">Learn more</button>
-                    </div>
-                    <div class="pets-item cursor none">
-                        <img src="assets/img/pets-woody.png" alt="Woody" class="icon-item-pets">
-                        <h2 class="name-pet">Woody</h2>
-                        <button class="learn-more button cursor">Learn more</button>
-                    </div>
+                <div class="pet-card" id="pets-container">
+<!--                    <div class="pets-item cursor" data-index="4">-->
+<!--                        <img src="assets/img/pets-katrine.png" alt="Katrine" class="icon-item-pets">-->
+<!--                        <h2 class="name-pet">Katrine</h2>-->
+<!--                        <button class="learn-more button cursor">Learn more</button>-->
+<!--                    </div>-->
+<!--                    <div class="pets-item cursor" data-index="0">-->
+<!--                        <img src="assets/img/pets-jennifer.png" alt="Jennifer" class="icon-item-pets">-->
+<!--                        <h2 class="name-pet">Jennifer</h2>-->
+<!--                        <button class="learn-more button cursor">Learn more</button>-->
+<!--                    </div>-->
+<!--                    <div class="pets-item cursor none" data-index="2">-->
+<!--                        <img src="assets/img/pets-woody.png" alt="Woody" class="icon-item-pets">-->
+<!--                        <h2 class="name-pet">Woody</h2>-->
+<!--                        <button class="learn-more button cursor">Learn more</button>-->
+<!--                    </div>-->
                 </div>
                 <div>
                     <button class="arrow-right button cursor">&larr;</button>
                 </div>
             </div>
             <a href="pets.html" class="our-button button cursor">Get to know the rest</a>
+            <div id="popup-overlay" class="hidden">
+                <div class="popup-content" id="popup-content">
+                    <button class="close-btn button cursor"><img src="assets/icon/close-btn.svg" alt="close-btn">
+                    </button>
+                    <div class="popup-body">
+                        <img class="popup-img" src="" alt="Pet Image" id="popup-img">
+                        <div class="popup-info">
+                            <h2 id="popup-name"></h2>
+                            <p id="popup-breed"></p>
+                            <p id="popup-description"></p>
+                            <ul>
+                                <li><strong>Age:</strong> <span id="popup-age"></span></li>
+                                <li><strong>Inoculations:</strong> <span id="popup-inoculations"></span></li>
+                                <li><strong>Diseases:</strong> <span id="popup-diseases"></span></li>
+                                <li><strong>Parasites:</strong> <span id="popup-parasites"></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </div>
     <div class="help-main">
         <div class="help" id="Help">
             <div>
-                <h3 class="help-title">How you can help<br>our shelter</h3>
+                <h3 class="help-title">How you can help our shelter</h3>
             </div>
             <div class="help-list">
                 <div class="help-item">
@@ -163,7 +184,7 @@
 <footer id="Contacts">
     <div class="footer-box">
         <div class="info-box">
-            <h2 class="footer-title">For questions <br class="none">and <br class="activ">suggestions</h2>
+            <h2 class="footer-title">For questions and suggestions</h2>
             <div class="info">
                 <img src="assets/icon/icon-email.svg" alt="icon email" class="icon-info">
                 <a href="mailto:email@shelter.com" class="info-item cursor">email@shelter.com</a>
@@ -179,8 +200,7 @@
             <div class="info">
                 <img src="assets/icon/icon-marker.svg" alt="icon marker" class="icon-info">
                 <a href="https://maps.app.goo.gl/vSjR24yrg53Eqfzu7" target="_blank" class="info-item cursor">1 Central
-                    Street,
-                    Boston<br>(entrance from the store)</a>
+                    Street, Boston<br>(entrance from the store)</a>
             </div>
             <div class="info">
                 <img src="assets/icon/icon-marker.svg" alt="icon marker" class="icon-info">
@@ -193,5 +213,9 @@
         <img src="assets/img/footer-puppy.png" alt="footer puppy" class="puppy-footer">
     </div>
 </footer>
+<div class="overlay"></div>
+<script src="assets/js/hamburger.js"></script>
+<script src="assets/js/popapp.js"></script>
+<script src="assets/js/main.js"></script>
 </body>
 </html>

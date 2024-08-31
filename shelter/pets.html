@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>pets</title>
-    <link rel="stylesheet" href="css/pets.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/header-pets.css">
+    <link rel="stylesheet" href="assets/css/pets.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/header-pets.css">
     <link rel="icon" href="assets/icon/icon-favicon.ico">
 </head>
 <body>
@@ -41,56 +41,74 @@
     <section class="friends-main">
         <div class="friend-box" id="our-friends">
             <div class="friends-title">
-                <h3 class="title-h3">Our friends who<br>
-                    are looking for a house</h3></div>
-            <div class="pet-card">
-                <div class="pets-item cursor">
-                    <img src="assets/img/pets-katrine.png" alt="Katrine">
-                    <p class="name-pet">Katrine</p>
-                    <button class="learn-more cursor">Learn more</button>
-                </div>
-                <div class="pets-item cursor">
-                    <img src="assets/img/pets-jennifer.png" alt="Jennifer">
-                    <p class="name-pet">Jennifer</p>
-                    <button class="learn-more cursor">Learn more</button>
-                </div>
-                <div class="pets-item cursor">
-                    <img src="assets/img/pets-woody.png" alt="Woody">
-                    <p class="name-pet">Woody</p>
-                    <button class="learn-more cursor">Learn more</button>
-                </div>
-                <div class="pets-item cursor">
-                    <img src="assets/icon/icon-sophia.png" alt="Sophia">
-                    <p class="name-pet">Sophia</p>
-                    <button class="learn-more cursor">Learn more</button>
-                </div>
-                <div class="pets-item cursor">
-                    <img src="assets/icon/icon-timmy.png" alt="Timmy">
-                    <p class="name-pet">Timmy</p>
-                    <button class="learn-more cursor">Learn more</button>
-                </div>
-                <div class="pets-item cursor">
-                    <img src="assets/icon/icon-charly.png" alt="Charly">
-                    <p class="name-pet">Charly</p>
-                    <button class="learn-more cursor">Learn more</button>
-                </div>
-                <div class="pets-item cursor">
-                    <img src="assets/icon/icon-scarlet.png" alt="Scarlett">
-                    <p class="name-pet">Scarlett</p>
-                    <button class="learn-more cursor">Learn more</button>
-                </div>
-                <div class="pets-item cursor">
-                    <img src="assets/icon/icon-freddie.png" alt="Freddie">
-                    <p class="name-pet">Freddie</p>
-                    <button class="learn-more cursor">Learn more</button>
-                </div>
+                <h3 class="title-h3">Our friends who<br>are looking for a house</h3></div>
+            <div class="pet-card" id="pets-container">
+<!--                <div class="pets-item cursor" data-index="4">-->
+<!--                    <img src="assets/img/pets-katrine.png" alt="Katrine">-->
+<!--                    <p class="name-pet">Katrine</p>-->
+<!--                    <button class="learn-more cursor">Learn more</button>-->
+<!--                </div>-->
+<!--                <div class="pets-item cursor" data-index="0">-->
+<!--                    <img src="assets/img/pets-jennifer.png" alt="Jennifer">-->
+<!--                    <p class="name-pet">Jennifer</p>-->
+<!--                    <button class="learn-more cursor">Learn more</button>-->
+<!--                </div>-->
+<!--                <div class="pets-item cursor" data-index="2">-->
+<!--                    <img src="assets/img/pets-woody.png" alt="Woody">-->
+<!--                    <p class="name-pet">Woody</p>-->
+<!--                    <button class="learn-more cursor">Learn more</button>-->
+<!--                </div>-->
+<!--                <div class="pets-item cursor" data-index="1">-->
+<!--                    <img src="assets/img/pets-sophia.png" alt="Sophia">-->
+<!--                    <p class="name-pet">Sophia</p>-->
+<!--                    <button class="learn-more cursor">Learn more</button>-->
+<!--                </div>-->
+<!--                <div class="pets-item cursor" data-index="5">-->
+<!--                    <img src="assets/img/pets-timmy.png" alt="Timmy">-->
+<!--                    <p class="name-pet">Timmy</p>-->
+<!--                    <button class="learn-more cursor">Learn more</button>-->
+<!--                </div>-->
+<!--                <div class="pets-item cursor" data-index="7">-->
+<!--                    <img src="assets/img/pets-charly.png" alt="Charly">-->
+<!--                    <p class="name-pet">Charly</p>-->
+<!--                    <button class="learn-more cursor">Learn more</button>-->
+<!--                </div>-->
+<!--                <div class="pets-item cursor" data-index="3">-->
+<!--                    <img src="assets/img/pets-scarlett.png" alt="Scarlett">-->
+<!--                    <p class="name-pet">Scarlett</p>-->
+<!--                    <button class="learn-more cursor">Learn more</button>-->
+<!--                </div>-->
+<!--                <div class="pets-item cursor" data-index="6">-->
+<!--                    <img src="assets/img/pets-freddie.png" alt="Freddie">-->
+<!--                    <p class="name-pet">Freddie</p>-->
+<!--                    <button class="learn-more cursor">Learn more</button>-->
+<!--                </div>-->
             </div>
             <div class="friend-nav">
-                <button class="nav-item disables off" disabled>&lt;&lt;</button>
-                <button class="nav-item disables off" disabled>&lt;</button>
-                <button class="nav-item cursor on">1</button>
-                <button class="nav-item cursor">&gt;</button>
-                <button class="nav-item cursor">&gt;&gt;</button>
+                <button class="nav-item arrow-double-left">&lt;&lt;</button>
+                <button class="nav-item arrow-left">&lt;</button>
+                <button class="nav-item cursor on page-number">1</button>
+                <button class="nav-item cursor arrow-right">&gt;</button>
+                <button class="nav-item cursor arrow-double-right">&gt;&gt;</button>
+            </div>
+            <div id="popup-overlay" class="hidden">
+                <div class="popup-content" id="popup-content">
+                    <button class="close-btn button cursor"><img src="assets/icon/close-btn.svg" alt="close-btn"></button>
+                    <div class="popup-body">
+                        <img class="popup-img" src="" alt="Pet Image" id="popup-img">
+                        <div class="popup-info">
+                            <h2 id="popup-name"></h2>
+                            <p id="popup-breed"></p>
+                            <p id="popup-description"></p>
+                            <ul>
+                                <li><strong>Age:</strong> <span id="popup-age"></span></li>
+                                <li><strong>Inoculations:</strong> <span id="popup-inoculations"></span></li>
+                                <li><strong>Diseases:</strong> <span id="popup-diseases"></span></li>
+                                <li><strong>Parasites:</strong> <span id="popup-parasites"></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -98,7 +116,7 @@
 <footer id="Contacts">
     <div class="footer-box">
         <div class="info-box">
-            <h2 class="footer-title">For questions <br class="none">and <br class="activ">suggestions</h2>
+            <h2 class="footer-title">For questions and suggestions</h2>
             <div class="info">
                 <img src="assets/icon/icon-email.svg" alt="icon email" class="icon-info">
                 <a href="mailto:email@shelter.com" class="info-item cursor">email@shelter.com</a>
@@ -114,8 +132,7 @@
             <div class="info">
                 <img src="assets/icon/icon-marker.svg" alt="icon marker" class="icon-info">
                 <a href="https://maps.app.goo.gl/vSjR24yrg53Eqfzu7" target="_blank" class="info-item cursor">1 Central
-                    Street,
-                    Boston<br>(entrance from the store)</a>
+                    Street, Boston<br>(entrance from the store)</a>
             </div>
             <div class="info">
                 <img src="assets/icon/icon-marker.svg" alt="icon marker" class="icon-info">
@@ -128,5 +145,9 @@
         <img src="assets/img/footer-puppy.png" alt="footer puppy" class="puppy-footer">
     </div>
 </footer>
+<div class="overlay"></div>
+<script src="assets/js/hamburger.js"></script>
+<script src="assets/js/popapp.js"></script>
+<script src="assets/js/pets.js"></script>
 </body>
 </html>

@@ -1,31 +1,32 @@
 @font-face {
     font-family: 'Arial';
-    src: url('../assets/fonts/arial/arial-regular.ttf') format('truetype');
+    src: url('../fonts/arial/arial-regular.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Georgia';
-    src: url('../assets/fonts/georgia/georgia-regular.ttf') format('truetype');
+    src: url('../fonts/georgia/georgia-regular.ttf') format('truetype');
 }
 
-header {
-    background-image: url('../assets/img/start-screen-gradient-background.jpg');
+.background-header {
+    background-image: url('../img/start-screen-gradient-background.jpg');
     background-size: cover;
     background-position: center;
+}
+
+.header-box {
+    margin: 0 auto;
+    max-width: 1200px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     gap: 90px;
-    margin: 0 auto;
     padding: 30px 40px 0 40px;
 }
 
 .header-main {
     display: flex;
-    max-width: 1200px;
-    white-space: nowrap;
-    align-items: center;
     justify-content: space-between;
+    white-space: nowrap;
 }
 
 .logo {
@@ -62,7 +63,6 @@ nav {
     display: flex;
     flex-direction: column;
     gap: 10px;
-
 }
 
 .hamburger span {
@@ -74,7 +74,7 @@ nav {
 
 html {
     scroll-behavior: smooth;
-    cursor: url('../assets/icon/icon-normal.png'), auto;
+    cursor: url('../icon/icon-normal.png'), auto;
 }
 
 body {
@@ -82,6 +82,10 @@ body {
     padding: 0;
     box-sizing: border-box;
     width: 100%;
+}
+
+body.block {
+    overflow: hidden;
 }
 
 .Not-only {
@@ -106,8 +110,7 @@ div.not-only {
 .about-s {
     display: flex;
     max-width: 1200px;
-    gap: 120px;
-    margin: 0 auto;
+    gap: clamp(50px, 10vw, 120px);
 }
 
 .about-d {
@@ -115,7 +118,6 @@ div.not-only {
     background-size: cover;
     background-position: center;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 80px 40px 100px 40px;
@@ -172,12 +174,12 @@ div.not-only {
     letter-spacing: 0;
     text-align: left;
     text-decoration: none;
+
 }
 
 .nav-link:hover {
     color: rgb(250, 250, 250);
     font-family: Arial, serif;
-    font-size: 15px;
     font-weight: 400;
     line-height: 160%;
     letter-spacing: 0;
@@ -192,7 +194,6 @@ div.not-only {
     text-decoration-thickness: 3px;
     color: rgb(250, 250, 250);
     font-family: Arial, serif;
-    font-size: 15px;
     font-weight: 400;
     line-height: 160%;
     letter-spacing: 0;
@@ -290,6 +291,7 @@ div.not-only {
     line-height: 130%;
     letter-spacing: 0.06em;
     margin: 0;
+    max-width: 380px;
 }
 
 .About-text > p {
@@ -401,6 +403,7 @@ div.text-donat {
     font-weight: 400;
     line-height: 130%;
     letter-spacing: 0.06em;
+    max-width: 370px;
 }
 
 .start-puppy {
@@ -417,6 +420,7 @@ div.text-donat {
     letter-spacing: 0;
     text-align: left;
     margin: 0;
+    max-width: 310px;
 }
 
 .not-only-p {
@@ -449,7 +453,8 @@ div.text-donat {
 }
 
 .about-pets {
-    max-width: 300px;
+    object-fit: contain;
+    width: 300px;
 }
 
 .first-p {
@@ -482,7 +487,9 @@ div.text-donat {
     line-height: 130%;
     letter-spacing: 0.06em;
     text-align: center;
+    max-width: 500px;
     margin: 0;
+
 }
 
 .our-button {
@@ -627,7 +634,7 @@ a {
 }
 
 .cursor {
-    cursor: url('../assets/icon/icon-hover.png'), auto;
+    cursor: url('../icon/icon-hover.png'), auto;
     transition: background 1s ease;
 }
 
@@ -639,7 +646,113 @@ a {
     flex-direction: column;
 }
 
+#popup-overlay {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1s ease;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#popup-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup-content {
+    position: relative;
+    border-radius: 9px;
+}
+
+.popup-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(250, 250, 250);
+    width: 900px;
+    height: 500px;
+    border-radius: 9px;
+}
+
+.popup-info {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    max-width: 350px;
+    color: rgb(0, 0, 0);
+    font-family: Georgia, serif;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    text-align: left;
+    margin: 50px 20px 88px 29px;
+
+}
+
+#popup-name {
+    font-size: 35px;
+    line-height: 130%;
+    margin: 0 0 10px 0;
+}
+
+#popup-breed {
+    font-size: 20px;
+    line-height: 115%;
+    margin: 0;
+}
+
+#popup-description {
+    font-size: 15px;
+    line-height: 110%;
+    margin: 40px 0;
+}
+
+.close-btn {
+    position: absolute;
+    right: -40px;
+    top: -55px;
+    border: 2px solid rgb(241, 205, 179);
+    border-radius: 100px;
+    width: 52px;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+
+}
+
+.popup-info > ul > li::marker {
+    color: rgb(241, 205, 179);
+}
+
+.popup-info > ul > li {
+    font-size: 15px;
+    line-height: 110%;
+}
+
+.popup-info > ul {
+    margin: 0;
+}
+
+.popup-img {
+    width: 500px;
+}
+
+
 @media (max-width: 768px) {
+
+    .hamburger.active {
+        transform: rotate(90deg);
+    }
 
     .main-our-friends {
         padding: 80px 30px 100px 30px;
@@ -653,7 +766,7 @@ a {
         gap: 12px;
     }
 
-    header {
+    .header-box {
         padding: 30px 30px 0 30px;
         gap: 60px;
     }
@@ -693,7 +806,7 @@ a {
     .start-puppy {
         width: clamp(200px, 75vw, 569px);
         align-self: normal;
-        margin: 0 0 0 clamp(10px, 10vw, 70px);
+        margin: 0 0 0 clamp(1px, 5vw, 70px);
     }
 
     .box-our-friends {
@@ -755,7 +868,7 @@ a {
     }
 
     .card {
-        font-size:clamp(15px, 3vw, 20px);
+        font-size: clamp(15px, 3vw, 20px);
     }
 
 }
@@ -764,10 +877,60 @@ a {
 
     .hamburger-menu {
         display: block;
+        z-index: 15;
+    }
+
+    .hamburger {
+        transition: transform 0.4s ease;
+    }
+
+    .nav-link-off {
+        text-underline-offset: 15px;
     }
 
     .nav-list {
-        display: none;
+        position: fixed;
+        flex-direction: column;
+        right: -100%;
+        top: 0;
+        background: rgb(41, 41, 41);
+        width: 243px;
+        padding: 250px 38px 246px 38px;
+        margin: 0;
+        gap: 40px;
+        z-index: 10;
+        transition: right 1s ease;
+        height: 100vh;
+    }
+
+    .nav-list.active {
+        right: 0;
+    }
+
+    .overlay {
+        opacity: 0;
+        transition: opacity 1s ease;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 5;
+        pointer-events: none;
+    }
+
+    .overlay.active {
+        opacity: 1;
+    }
+
+    .nav-link {
+        font-size: 32px;
+    }
+
+    .nav-link-off {
+        font-size: 32px;
+
     }
 
     header {
@@ -794,6 +957,7 @@ a {
     .arrow-left {
         order: 0;
     }
+
     .arrow-right {
         order: 0;
     }
@@ -822,6 +986,7 @@ a {
     .Not-only {
         padding: 0;
         max-width: 300px;
+        align-items: center;
     }
 
     .start-puppy {
@@ -928,11 +1093,13 @@ a {
         font-size: 25px;
         letter-spacing: 0.06em;
         text-align: center;
+        max-width: 250px;
     }
 
-    header {
+    .header-box {
         padding: 0;
     }
+
 
     .header-main {
         padding: 30px 20px 0 20px;
@@ -951,6 +1118,7 @@ a {
 
     .about-cozy {
         font-size: 25px;
+        max-width: 250px;
     }
 
     .first-p {
@@ -974,6 +1142,7 @@ a {
 
     .help-title {
         font-size: 25px;
+        max-width: 250px;
     }
 
     .you-can {
