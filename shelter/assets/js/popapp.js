@@ -2,8 +2,8 @@
 function activatePopup(petsData) {
     document.querySelectorAll('.pets-item').forEach(item => {
         item.addEventListener('click', function () {
-            const index = this.getAttribute('data-index');
-            const pet = petsData[index];
+            const name = this.getAttribute('data-name');
+            const pet = petsData.find(pet => pet.name === name);
             document.querySelector('#popup-img').src = pet.img;
             document.querySelector('#popup-name').textContent = pet.name;
             document.querySelector('#popup-breed').textContent = `${pet.type} - ${pet.breed}`;

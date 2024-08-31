@@ -293,10 +293,6 @@ button.on {
         gap: clamp(10px, 2.23vw, 20px);
     }
 
-    .pet-card .pets-item:nth-last-child(-n+2) {
-        display: none;
-    }
-
     .friends-main {
         padding: 60px 30px 70px 30px;
     }
@@ -316,10 +312,6 @@ button.on {
 
     .title-h3 {
         font-size: 25px;
-    }
-
-    .pet-card .pets-item:nth-last-child(-n+5) {
-        display: none;
     }
 
     .friend-nav {

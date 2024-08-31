@@ -24,7 +24,7 @@ function generateSliderCards() {
 
     slideItems.forEach((pet, index) => {
         const card = `
-            <div class="pets-item cursor" data-index="${index}">
+            <div class="pets-item cursor" data-name="${pet.name}">
                 <img src="${pet.img}" alt="${pet.name}">
                 <p class="name-pet">${pet.name}</p>
                 <button class="learn-more cursor">Learn more</button>
