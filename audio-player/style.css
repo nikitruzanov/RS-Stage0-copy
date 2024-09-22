@@ -117,3 +117,22 @@ body {
 #progress-bar {
     cursor: pointer;
 }
+
+footer, a, span, img {
+    z-index: 10;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 0;
+    padding: 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+footer img {
+    width: 30px;
+}
