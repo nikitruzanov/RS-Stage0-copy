@@ -33,7 +33,7 @@ body {
     line-height: 1;
     margin: 0 auto;
     padding: 0;
-    background: #000;
+    background: black;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -64,6 +64,24 @@ header {
     padding: 30px;
     justify-content: center;
     align-items: center;
+    gap: 40px;
+}
+
+.lupa {
+    position: relative;
+    right: 10%;
+    top: 3px;
+}
+
+.lupa::before {
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-image: url('assets/img/lupa.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
 }
 
 footer {
@@ -80,6 +98,9 @@ footer img {
     width: 30px;
 }
 
-footer span {
+h2, span {
     color: white;
+}
+
+#search_box {
 }
