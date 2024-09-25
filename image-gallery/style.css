@@ -62,22 +62,36 @@ header {
     width: 100%;
     display: flex;
     padding: 30px;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: 40px;
 }
 
+.arrayImage {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrayImage img {
+    width: 300px;
+    margin: 10px;
+}
+
 .lupa {
-    position: relative;
-    right: 10%;
-    top: 3px;
 }
 
 .lupa::before {
     content: "";
     display: inline-block;
-    width: 15px;
-    height: 15px;
+    width: 30px;
+    height: 30px;
     background-image: url('assets/img/lupa.png');
     background-size: contain;
     background-repeat: no-repeat;
@@ -102,5 +116,24 @@ h2, span {
     color: white;
 }
 
+header span {
+    color: red;
+}
+
 #search_box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+}
+
+#input {
+    border-radius: 15px;
+    width: 200px;
+    height: 30px;
+}
+
+.clear-btn {
+    position: absolute;
+    right: 7%;
 }
