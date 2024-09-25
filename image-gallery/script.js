@@ -1,4 +1,4 @@
-const apiKey = '1mamdOoL1-_Xoy8-qMTTqKUfFdI4Y5oARtO0H8tJR2fo';
+const apiKey = 'mamdOoL1-_Xoy8-qMTTqKUfFdI4Y5oARtO0H8tJR2fo';
 
 async function getImages(query) {
     try {
@@ -52,4 +52,20 @@ document.addEventListener('DOMContentLoaded', () => {
     getRandomImages();
 })
 
+const input = document.getElementById("input");
+const closeBtn = document.getElementById("close");
 
+closeBtn.addEventListener("click", () => {
+    input.value = "";
+    input.placeholder = 'Search...';
+    closeBtn.style.display = 'none';
+    }
+)
+
+input.addEventListener('input', () => {
+    if (input.value.length > 0) {
+        closeBtn.style.display = 'inline';
+    } else {
+        closeBtn.style.display = 'none';
+    }
+})
