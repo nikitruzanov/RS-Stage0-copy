@@ -26,6 +26,16 @@
     animation: barrierMov 1s linear infinite;
 }
 
+.speed1 {
+    animation: barrierMov 1s linear infinite;
+}
+.speed2 {
+    animation: barrierMov 2s linear infinite;
+}
+.speed3 {
+    animation: barrierMov 3s linear infinite;
+}
+
 @keyframes barrierMov {
     0% {
         left: 900px;
@@ -72,9 +82,7 @@ footer {
 }
 
 #score {
-    position: fixed;
-    top: 20px;
-    left: 20px;
+
     font-size: 24px;
 }
 
@@ -148,8 +156,26 @@ table {
     height: 40px;
     background-image: url("./assets/img/restart.png");
     background-size: 40px 40px;
-    position: absolute;
-    top: 40px;
-    right: 40px;
     cursor: pointer;
+}
+
+.technical {
+    padding: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#difficulty {
+    display: flex;
+    gap: 20px;
+}
+
+.button {
+    width: 100px;
+}
+
+.button.active {
+    background-color: orange;
 }
