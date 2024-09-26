@@ -57,7 +57,7 @@
     }
 }
 
-.score {
+.scoreTable {
     flex-grow: 1;
 }
 
@@ -69,6 +69,13 @@ footer {
     gap: 30px;
     border-top: 5px solid orange;
     width: 100%;
+}
+
+#score {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
 }
 
 footer img {
