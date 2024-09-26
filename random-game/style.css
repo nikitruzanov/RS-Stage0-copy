@@ -179,3 +179,22 @@ table {
 .button.active {
     background-color: orange;
 }
+
+.scoreTable {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.scoreTable thead th {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f4f4f4;
+}
+
+.scoreTable tbody td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
