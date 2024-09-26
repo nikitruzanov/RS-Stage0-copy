@@ -1,0 +1,148 @@
+.game {
+    width: 100%;
+    height: 200px;
+    border-bottom: 3px solid black;
+    margin:  50px auto;
+}
+
+.character {
+    width: 50px;
+    height: 50px;
+    background-image: url("./assets/img/character.png");
+    background-size: 50px 50px;
+    position: relative;
+    top: 150px;
+    left: 30px;
+}
+
+.barrier {
+    width: 40px;
+    height: 40px;
+    background-image: url("./assets/img/barrier.png");
+    background-size: 40px 40px;
+    position: relative;
+    top: 110px;
+    left: 900px;
+    animation: barrierMov 1s linear infinite;
+}
+
+@keyframes barrierMov {
+    0% {
+        left: 900px;
+    }
+    100% {
+        left: -70px;
+    }
+}
+
+.jump {
+    animation: jump 0.3s linear;
+}
+
+@keyframes jump {
+    0% {
+        top: 150px;
+    }
+    30% {
+        top: 50px;
+    }
+    50% {
+        top: 20px;
+    }
+    80% {
+        top: 50px;
+    }
+    100% {
+        top: 150px;
+    }
+}
+
+.score {
+    flex-grow: 1;
+}
+
+footer {
+    display: flex;
+    padding: 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    border-top: 5px solid orange;
+    width: 100%;
+}
+
+footer img {
+    width: 30px;
+}
+
+h2, span {
+    color: black;
+}
+
+
+
+/* Reset.css от Эрика Мейера */
+body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+
+}
+
+main {
+    flex-grow: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.restartButton {
+    width: 40px;
+    height: 40px;
+    background-image: url("./assets/img/restart.png");
+    background-size: 40px 40px;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    cursor: pointer;
+}
