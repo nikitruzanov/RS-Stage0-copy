@@ -2,7 +2,7 @@
     width: 100%;
     height: 200px;
     border-bottom: 3px solid black;
-    margin:  50px auto;
+    margin: 50px auto;
 }
 
 .character {
@@ -27,13 +27,15 @@
 }
 
 .speed1 {
+    animation: barrierMov 0.5s linear infinite;
+}
+
+.speed2 {
     animation: barrierMov 1s linear infinite;
 }
-.speed2 {
-    animation: barrierMov 2s linear infinite;
-}
+
 .speed3 {
-    animation: barrierMov 3s linear infinite;
+    animation: barrierMov 1.5s linear infinite;
 }
 
 @keyframes barrierMov {
@@ -93,7 +95,6 @@ footer img {
 h2, span {
     color: black;
 }
-
 
 
 /* Reset.css от Эрика Мейера */
