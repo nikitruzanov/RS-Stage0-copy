@@ -38,12 +38,12 @@ let isAlive = setInterval(function () {
   }
 }, 10);
 
-document.addEventListener("keydown", function (event) {
+document.addEventListener("keydown", function () {
   jump();
 });
 
 function jump() {
-  if (character.classList != "jump") {
+  if (!character.classList.contains("jump")) {
     character.classList.add("jump");
   }
   setTimeout(function () {
